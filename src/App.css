@@ -1,38 +1,176 @@
-.App {
-  text-align: center;
+.header {
+  position: relative;
+  width: 100vw;
+  height: 80vh;
+}
+.background-img {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.5)), url('./assets/Untitled-1.png') no-repeat;
+  object-fit: contain;
+  background-position-x: center;
+}
+.header-container {
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  text-align: left;
+  color: #FFFFFF;
+}
+.heading {
+  font-size: 38px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  margin-bottom: 5px;
+}
+.desc {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 5px;
+}
+.offer-btn {
+  margin-top: 20px;
+  background: transparent linear-gradient(90deg, #266EFD 0%, #3876F1 100%) 0% 0% no-repeat padding-box;
+  color: #FFFFFF;
+  font-weight: 500;
+  box-shadow: 0px 3px 17px #3876F1;
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.jobOffers {
+  padding: 3% 8%;
+}
+.jobOffer_heading {
+  color: #141414;
+  font-size: 34px;
+  margin-bottom: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.view-all {
+  color: #276FFB;
+  font-size: 12px;
+  margin-top: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.list-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.item-container {
+  position: relative;
   display: flex;
   flex-direction: column;
+  width: 28%;
+}
+
+.item-container:not(:first-child) {
+  margin-left: 8%;
+}
+.item-container:not(:first-child)::before {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 100%;
+  background-color: #141414;
+  opacity: 0.3;
+  left: -15%;
+}
+.role-container {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.role {
+  font-size: 16px;
+  color: #276FFB;
+}
+.timestamp {
+  font-size: 12px;
+  color: #141414;
+  opacity: 0.6;
+}
+.company-details {
+  margin-top: 5px;
+  display: flex;
+  font-size: 12px;
+  color: #141414;
+}
+.company-name {
+  margin-right: 10px;
+}
+.location {
+  opacity: 0.6;
+}
+.description {
+  font-size: 12px;
+  color: #141414;
+  opacity: 0.6;
+  margin-right: 20px;
+  margin-top: 20px;
+  padding-right: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.offer-btn.nxt-btn {
+  position: absolute;
+  font-size: 18px;
+  padding: 5px 10px;
+  right: 10px;
+  bottom: -10px;
+}
+.company-container {
+  display: flex;
+  max-width: 100%;
+  overflow-x: scroll;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.comapany-item {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  min-width: 100px;
+  padding-bottom: 20px;
+}
+.img-container {
+  padding: 10px;
+  border: 1px solid #B9B9B9;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.company-name {
+  color: #000;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 769px) {
+  .list-container {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .item-container {
+    width: 90%;
+    margin: 20px 0px;
+  }
+  .item-container:not(:first-child) {
+    margin: 20px 0px;
+  }
+  .description {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .jobOffers {
+    padding: 10px;
+  }
+  .jobOffer_heading {
+    font-size: 20px;
+    margin-bottom: 20px;
   }
 }
