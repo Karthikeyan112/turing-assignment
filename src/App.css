@@ -150,7 +150,7 @@
   font-weight: bold;
 }
 
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 980px) {
   .list-container {
     flex-direction: column;
   }
@@ -166,11 +166,20 @@
   }
 }
 @media only screen and (max-width: 480px) {
+  .header {
+    height: 100vh;
+  }
   .jobOffers {
     padding: 10px;
   }
+  .heading {
+    font-size: 28px;
+  }
+  .jobOffers {
+    padding: 20px 10px;
+  }
   .jobOffer_heading {
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
